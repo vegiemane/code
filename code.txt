@@ -1,0 +1,17 @@
+<script>
+(function () {
+  var value = "{{Imported UTM}}";
+    // Extract the value of utm parameters
+  
+  var url = new URL(value);
+  var gclidValue = url.searchParams.get("gclid");
+  
+    // Select the fields
+  var gclidSelector = "input[id='form-field-gclid']";
+  var gclidField = document.querySelector(gclidSelector);
+  
+    // Input the fields
+  if(gclidField){ gclidField.value = gclidValue; }
+
+})();
+</script>
